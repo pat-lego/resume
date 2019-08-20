@@ -6,11 +6,11 @@ import del from 'del';
 /**
  * Variables used as global vars across the application
  */
-const dist = 'docs';
+const dist = 'dist';
 
 // Clean assets
 function clean() {
-    return del(["../".concat(dist).concat("/")], 
+    return del(["./".concat(dist).concat("/")], 
                 { force: true });
 }
 
@@ -18,7 +18,7 @@ function clean() {
 function css() {
     return gulp
             .src('./src/**/*.css')
-            .pipe(gulp.dest('../'.concat(dist)))
+            .pipe(gulp.dest('./'.concat(dist)))
             .pipe(connect.reload());
 }
 
@@ -26,7 +26,7 @@ function css() {
 function html() {
     return gulp
             .src('./src/**/*.html')
-            .pipe(gulp.dest('../'.concat(dist)))
+            .pipe(gulp.dest('./'.concat(dist)))
             .pipe(connect.reload());
 }
 
@@ -54,7 +54,7 @@ function watchCss() {
 async function webserver() {
     await connect.server({
         name: 'Resume',
-        root: '../'.concat(dist),
+        root: './'.concat(dist),
         port: 3001,
         livereload: true
     });

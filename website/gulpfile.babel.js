@@ -6,7 +6,7 @@ import del from 'del';
 /**
  * Variables used as global vars across the application
  */
-const dist = 'dist';
+const dist = 'docs';
 
 // Clean assets
 function clean() {

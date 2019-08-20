@@ -1,0 +1,34 @@
+{
+  "name": "io.github.pat-lego.resume",
+  "version": "1.0.0",
+  "description": "pat-lego personal resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pat-lego/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "cs",
+    "pat-lego",
+    "gulp",
+    "css",
+    "html",
+    "js"
+  ],
+  "author": "Patrique Legault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pat-lego/resume/issues"
+  },
+  "homepage": "https://github.com/pat-lego/resume#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}

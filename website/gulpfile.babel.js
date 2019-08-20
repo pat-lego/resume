@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var connect = require('gulp-connect');
+import gulp from 'gulp';
+import connect from 'gulp-connect';
 
-const del = require('del');
+import del from 'del';
 
 /**
  * Variables used as global vars across the application

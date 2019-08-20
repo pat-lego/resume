@@ -1,7 +1,7 @@
 {
   "name": "io.github.pat-lego.resume",
   "version": "1.0.0",
-  "description": "pat-lego personal resume",
+  "description": "pat-lego personal resumé",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/pat-lego/resume.git"
   },
   "keywords": [
-    "resume",
+    "resumé",
     "cs",
     "pat-lego",
     "gulp",
@@ -29,6 +29,6 @@
     "browser-sync": "^2.26.7",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
-    "gulp-webserver": "^0.9.1"
+    "gulp-connect": "^5.7.0"
   }
 }

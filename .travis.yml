@@ -13,8 +13,7 @@ jobs:
     - npm install
     - npm run test
 stages:
-- name: test
-  if: type = pull_request
+- test
 notifications:
   email:
     recipients:

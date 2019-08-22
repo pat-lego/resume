@@ -1,10 +1,8 @@
-import gulp from 'gulp';
-import connect from 'gulp-connect';
-import uglify from 'gulp-uglify';
-
-import cleanCSS from 'gulp-clean-css';
-
-import del from 'del';
+var gulp = require('gulp');
+var connect = require('gulp-connect');
+var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
+var del = require('del');
 
 /**
  * Variables used as global vars across the application

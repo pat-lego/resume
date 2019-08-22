@@ -13,6 +13,10 @@ npm install gulp -g
 
 Once this is installed you can now nagivate inside of the website folder and run the following command `npm install`. Once this is complete simply type `gulp` in order to bring up the website. The website will be hosted on port 3001.
 
+# How to test
+
+Navigate to the `website` folder and run `npm install`. Once this is complete run the `npm run test` command and this will use [jest](https://jestjs.io/) to test the JS utility functions.
+
 # Contributors
 
 - [Patrique Legault](https://github.com/pat-lego)

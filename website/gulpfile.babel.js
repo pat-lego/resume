@@ -1,5 +1,8 @@
 import gulp from 'gulp';
 import connect from 'gulp-connect';
+import uglify from 'gulp-uglify';
+
+import cleanCSS from 'gulp-clean-css';
 
 import del from 'del';
 
@@ -18,6 +21,16 @@ function clean() {
 function css() {
     return gulp
             .src('./src/**/*.css')
+            .pipe(cleanCSS())
+            .pipe(gulp.dest('./'.concat(dist)))
+            .pipe(connect.reload());
+}
+
+//Build the CSS
+function js() {
+    return gulp
+            .src('./src/**/*.js')
+            .pipe(uglify())
             .pipe(gulp.dest('./'.concat(dist)))
             .pipe(connect.reload());
 }
@@ -50,6 +63,16 @@ function watchCss() {
     });
 }
 
+// Watch the CSS code changes
+function watchJs() {
+    return new Promise((resolve, reject) => {
+            gulp
+                .watch('./src/**/*.js', 
+                gulp.series(js));
+            resolve();
+    });
+}
+
 //Run the server
 async function webserver() {
     await connect.server({
@@ -61,9 +84,9 @@ async function webserver() {
 }
 
 const build = gulp.series(clean, 
-                    gulp.parallel(css, html), 
+                    gulp.parallel(css, html, js), 
                     gulp.series(webserver),
-                    gulp.parallel(watchHtml, watchCss));
+                    gulp.parallel(watchHtml, watchCss, watchJs));
 
 exports.default = build;
 exports.webserver = webserver;

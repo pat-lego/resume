@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/pat-lego/resume.svg?branch=master)](https://travis-ci.com/pat-lego/resume)
+
 # resume
 My personal resumé
 

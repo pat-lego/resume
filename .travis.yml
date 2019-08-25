@@ -15,9 +15,6 @@ jobs:
     script:
       - cd website && npm install
       - gulp deploy
-      - pwd
-      - cd dist
-      - pwd
 stages:
 - name: test
   if: type = pull_request
@@ -34,6 +31,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  local_dir: $HOME/build/resume/website/dist
+  local_dir: $HOME/build/pat-lego/resume/website/dist
   on:
     branch: master

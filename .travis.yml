@@ -9,12 +9,11 @@ cache: npm
 jobs:
   include:
   - script:
-    - cd website
-    - npm install
+    - cd website && npm install
     - npm run test
   - stage: deploy
     script:
-      - cd website
+      - cd website && npm install
       - gulp deploy
 stages:
 - name: test

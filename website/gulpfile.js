@@ -9,7 +9,7 @@ var del = require('del');
  */
 const dist = 'dist';
 
-// Clean assets
+// Clean previous build
 function clean() {
     return del(["./".concat(dist).concat("/")],
         { force: true });
@@ -24,7 +24,7 @@ function css() {
         .pipe(connect.reload());
 }
 
-//Build the CSS
+//Build the JS
 function js() {
     return gulp
         .src('./src/**/*.js')
@@ -38,6 +38,24 @@ function html() {
     return gulp
         .src('./src/**/*.html')
         .pipe(gulp.dest('./'.concat(dist)))
+        .pipe(connect.reload());
+}
+
+function fonts() {
+    return gulp
+        .src('./src/fonts/*')
+        .pipe(gulp.dest('./'
+                        .concat(dist)
+                        .concat('/fonts')))
+        .pipe(connect.reload());
+}
+
+function images() {
+    return gulp
+        .src('./src/images/**/*')
+        .pipe(gulp.dest('./'
+                        .concat(dist)
+                        .concat('/images')))
         .pipe(connect.reload());
 }
 
@@ -82,10 +100,10 @@ async function webserver() {
 }
 
 const build = gulp.series(clean,
-    gulp.parallel(css, html, js),
+    gulp.parallel(css, html, js, fonts, images),
     gulp.series(webserver),
     gulp.parallel(watchHtml, watchCss, watchJs));
 
 exports.default = build;
 exports.deploy = gulp.series(clean,
-    gulp.parallel(css, html, js));
+    gulp.parallel(css, html, js, fonts, images));

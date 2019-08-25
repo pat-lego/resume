@@ -15,6 +15,9 @@ jobs:
     script:
       - cd website && npm install
       - gulp deploy
+      - pwd
+      - cd dist
+      - pwd
 stages:
 - name: test
   if: type = pull_request

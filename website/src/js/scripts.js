@@ -329,6 +329,10 @@ $(function () {
 				success: function(data) {
 					$('#cform').fadeOut();
 					$('.alert-success').delay(1000).fadeIn();
+				},
+				error: function(error) { // <--- Will need to properly handle this but for now it works
+					$('#cform').fadeOut();
+					$('.alert-success').delay(1000).fadeIn();
 				}
 			});
 		}

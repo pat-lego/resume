@@ -596,13 +596,11 @@
 */
 /* 4.1 About */
 .info-list ul li {
-	display: inline-block;
-	width: 48%;
+	width: 60%;
 	line-height: 1.6;
 }
 
 .info-list ul li strong {
-	display: inline-block;
 	font-size: 13px;
 	color: #171717;
 	font-weight: 500;

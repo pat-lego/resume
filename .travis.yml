@@ -23,15 +23,4 @@ stages:
 notifications:
   email:
     recipients:
-    - patrique.legault@uottawa.ca
-  slack:
-    secure: POtkUH55XhupKZjr5tIO0bE16uBHACx+1Tc68vFb9HxvaPCyLatZYazChoJ3WgAnkbI+t5SrWo/MQ1WwJIjUhR6rQHSpO88H1pH4VIgcrJS14HYq465d7LUaJMImkDQe6kD7wfBvS77eKnaNKuyPFzkasrwLZMq+TgMMor2z0ul7Mw7HbBm0O9qCbNQTLwTZERkaeogETXGJGvIfzzzyXb2eAjASmcCp3yvr0u3Hv20L4QB8tbtMh0H7Swtx9kvB4oTHokFJnCu5934VmVBvdfSkSHo5hDPai4QQ0wJDaWdkrpmAWWkEidUoNB0zmKOCSxMll44HoWXx1gRvySDKlzwnWNUCVMla1tz6c8lrcfP9kOVFW/8EOzh0RgDo8SX6nkEvz2UDbX6KBNXdb96iMOm6vJXAuPmhpEjld2c5R234Drj18g3+omx26CCHWxbdjzrYAupZnQ6E0NbU42qLBv3vbV8EqvKleQo9vegkyxt9oL0eVfPC0g6aockAN4+5WLMjuCRq3SvsTTQXKkYwITQFkhJKj6dxmeqRjoESEoHabankQ0gjAHu0Re4DALV+3AgzxSbXWNzd7lL2GSxESHs9IiYYGRvpTgnf704LYPOuneAcybZbR5eJTscNDONVr1uQqucyftgkqkolatMSg/Pr337b+AmiKUwmM3cma5k=
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  fqdn: www.pat-lego.io
-  local_dir: $HOME/build/pat-lego/resume/website/dist
-  on:
-    branch: master
+    - patrique.legault@gmail.com
